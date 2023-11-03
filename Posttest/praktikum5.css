@@ -1,0 +1,124 @@
+/* CSS STYLE KITA */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #b3dfff;
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 100px;
+    grid-area: header;
+}
+
+header h1 {
+    color: #333;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header ul li {
+    margin-right: 15px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'aside main'
+    'aside main'
+    'footer footer';
+    grid-template-rows: 0.3fr 6fr 1.1fr 1.1fr;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-gap: 5px; /* Jarak antara setiap bagian */
+    border-color: #34495e;
+    height: 100%; /* Set tinggi elemen menjadi 100% dari tinggi viewport */
+    width: 100%; /* Set lebar elemen menjadi 100% dari lebar viewport */
+}
+
+
+aside {
+    grid-area: aside;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+main {
+    grid-area: main;
+    background-color: #f39c12;
+    color: black;
+    padding: 10px;
+    text-align:center;
+    font-size: 32px;
+}
+
+.h1 {
+    display: inline;
+
+}
+
+.p {
+    display:inline;
+}
+
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main p{
+    width: 500px;
+}
+.teks{
+    display: flex;
+    justify-content: center;
+    text-align:justify
+}
+
+.footer {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    grid-area: footer;
+    color: white;
+}
+
+img{
+    max-width: 150px;
+    background-image: url(circle.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -999999px;
+    position: absolute;
+    left:150px;
+    top:170px;
+    padding:0;
+}
+.footer .copy {
+    color: #eaeaea;
+    font-size: 12px;
+}
