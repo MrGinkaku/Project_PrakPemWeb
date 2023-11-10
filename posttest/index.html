@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cicak Asam manis</title>
+</head>
+<body>
+    <div class="container">
+        <div class="data">
+            <form>
+                <table>
+                    <tr>
+                        <td>Makanan :</td>
+                        <td>
+                            <select id="Makanan">
+                                <option value="Ayam Setengah mateng">Ayam Setengah mateng</option>
+                                <option value="telur hampir netes">telur hampir netes</option>
+                                <option value="sayur cengek">sayur cengek</option>
+                                <option value="genjer asem manis">genjer asem manis</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah:</td>
+                        <td><input type="text" id="Jumlah" placeholder="Masukkan jumlah"></td>
+                    </tr>
+                    <tr>
+                        <td>Voucher:</td>
+                        <td><input type="text" id="Voucher" placeholder="Masukkan kode voucher"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Submit" onclick="displayResult()"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="hasil" class="hasil">Hasil : </div>
+    </div>
+    <script>
+        var HargaMakanan = {
+            "Ayam Setengah mateng": 50000,
+            "telur hampir netes" : 100000,
+            "sayur cengek" : 150000,
+            "genjer asem manis" : 75000
+        };
+
+        console.log(HargaMakanan)
+        console.log(displayResult())
+
+        function displayResult(){
+            var Makanan = document.getElementById("Makanan").value;
+            var Jumlah = parseInt(document.getElementById("Jumlah").value);
+            var Voucher = document.getElementById("Voucher").value;
+            var total = HargaMakanan[Makanan] * Jumlah;
+            var diskon;
+            if(Voucher == "AkmalGantenk"){
+                diskon = 0.5;
+                total *= diskon; //diskon 50% boss
+                diskon = diskon * 100;
+            }
+            else if(Voucher == "AkmalJelek"){
+                diskon = 2;
+                total *=diskon; //bayar 2 kali lipet bos
+                diskon = -(diskon * 100);
+            }
+            var hasil = "Makanan: " + Makanan +"<br>Jumlah: " + Jumlah + "<br>Diskon: " + diskon+"%"+ "<br>Total harga: Rp "+ total.toFixed(2);
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* CSS untuk menambahkan border pada tabel */
+/*body*/
+body{
+    background-color: lightskyblue;
+}
+table {
+    border: 2px solid #000;
+    margin: 0 auto; /* Memindahkan tabel ke tengah halaman */
+    padding: 20px;
+}
+
+/* CSS untuk memindahkan class "hasil" ke tengah halaman */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightblue;
+    height: 350px;
+    width: 450px;
+    margin-left: 500px;
+}
+
+.data {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: skyblue;
+}
+
+.hasil{
+    background-color: skyblue;
+    padding:20px;
+}
