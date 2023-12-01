@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Web Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Input Contoh</h1>
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label>Jenis Kelamin:</label>
+        <input type="radio" id="pria" name="jenis-kelamin" value="pria">
+        <label for="pria">Pria</label>
+        <input type="radio" id="wanita" name="jenis-kelamin" value="wanita">
+        <label for="wanita">Wanita</label>
+
+        <label for="hobi">Hobi:</label>
+        <select id="hobi" name="hobi">
+            <option value="membaca">Membaca</option>
+            <option value="berenang">Berenang</option>
+            <option value="makan">Makan</option>
+        </select>
+
+        <button type="button" id="kirim">Kirim</button>
+    </form>
+
+    <div id="hasil-input"></div>
+
+    <script>
+        document.getElementById("kirim").addEventListener("click", function(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var jenisKelamin = document.querySelector('input[name="jenis-kelamin"]:checked').value;
+            var hobi = document.getElementById("hobi").value;
+
+            var result = "Data yang Anda masukkan:\n";
+            result += "Username: " + username + "\n";
+            result += "Password: " + password + "\n";
+            result += "Jenis Kelamin: " + jenisKelamin + "\n";
+            result += "Hobi: " + hobi + "\n";
+
+            document.getElementById("hasil-input").textContent = result;
+        });
+    </script>
+</body>
+</html>

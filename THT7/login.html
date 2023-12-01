@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="title">
+    Login & Register
+  </div>
+
+  <div class="form-grup">
+    <label for="username">Username</label>
+    <input type="text" class="form-kontrol" id="username" placeholder="Username">
+  </div>
+
+  <div class="form-grup">
+    <label for="password">Password</label>
+    <input type="password" class="form-kontrol" id="password" placeholder="Password">
+  </div>
+
+  <div class="form-grup">
+    <button type="button" class="btn" id="loginBtn">Login</button>
+    <button type="button" class="btn" id="registerBtn">Register</button>
+  </div>
+</div>
+
+<script>
+  const akun = [
+    {
+      username: "admin",
+      password: "admin",
+    },
+  ];
+
+  const login = () => {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    for (const user of akun) {
+      if (user.username === username && user.password === password) {
+        window.location.href = "halaman.html";
+        return true;
+      }
+    }
+
+    alert("Username atau password salah!");
+    return false;
+  };
+
+  const register = () => {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (username === "" || password === "") {
+      alert("Username atau password tidak boleh kosong!");
+      return;
+    }
+
+    for (const user of akun) {
+      if (user.username === username) {
+        alert("Username sudah ada!");
+        return;
+      }
+    }
+
+    akun.push({
+      username,
+      password,
+    });
+
+    alert("Registrasi berhasil!");
+  };
+
+  document.getElementById("loginBtn").addEventListener("click", login);
+  document.getElementById("registerBtn").addEventListener("click", register);
+</script>
+
+</body>
+</html>

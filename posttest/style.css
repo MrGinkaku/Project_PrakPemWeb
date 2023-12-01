@@ -1,0 +1,75 @@
+/* Tambahkan gaya Anda di sini */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightcyan;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-top: 20px;
+    border:5px solid black;
+    padding: 20px;
+    background-color: rgb(2, 13, 68);
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #ccc;
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#toggleDarkMode, #reset {
+    margin-top: 20px;
+    background-color: rgb(3, 168, 201); 
+    cursor: pointer;
+    border-radius: 2em;
+    font-size: 20px;
+    border: none;
+    padding: 20px;
+}
+
+.dark-mode{
+    background-color: rgb(2, 13, 68);
+}
+
+.dark-mode h1{
+    color:white;
+}
+
+.dark-mode .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-top: 20px;
+    border:5px solid white;
+    padding: 20px;
+    background-color: lightcyan;
+}
+
+.dark-mode .status {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color:white
+}
