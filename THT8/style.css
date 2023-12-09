@@ -1,0 +1,266 @@
+/* CSS LAYOUTING - WebSederhana2 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; 
+    display: table; 
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+/* CSS SAYA */
+/* Atur warna latar belakang menjadi antiquewhite dan hapus margin untuk memastikan konten tidak bergeser */
+body {
+    background-color: antiquewhite;
+    margin: 0;
+}
+
+/* Buat kontainer flex dengan lebar 1140px dan jarak antar elemen */
+.container {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+}
+
+/* Gaya untuk header dengan padding, latar belakang, dan properti lainnya */
+.header {
+    padding: 5px 50px; /* Menggabungkan padding atas, kanan, kiri */
+    background-color: white;
+    display: flex;
+    box-sizing: border-box;
+    float: none;
+    line-height: 24px;
+    position: static;
+    z-index: auto;
+    display: flex; /* Redundan - sudah didefinisikan di atas */
+    align-items: center;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+/* Gaya untuk elemen ul dalam header */
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gaya untuk elemen li dalam header */
+.header ul li {
+    display: inline-block;
+    margin-right: 10px;
+    color: black;
+}
+
+/* Gaya untuk elemen a dalam header */
+.header a {
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+}
+
+/* Gaya untuk anchor top-menu saat dihover */
+.top-menu a:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+/* Gaya untuk anchor main-menu saat dihover */
+.main-menu a:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+/* Gaya untuk elemen pojok-kiri */
+.pojok-kiri {
+    display: flex;
+    margin-left: 150px;
+}
+
+/* Gaya untuk navbar */
+.navbar {
+    display: flex;
+    width: 677px;
+    display: flex; /* Redundan - sudah didefinisikan di atas */
+    flex-direction: column; /* Menentukan tata letak vertikal */
+    /* align-items: center; Untuk membuat elemen sejajar tengah */
+}
+
+/* Gaya untuk top-menu */
+.top-menu {
+    display: flex;
+    flex-direction: column; /* Menentukan tata letak vertikal */
+    align-items: flex-end; /* Untuk membuat elemen sejajar tengah */
+    margin: 0; /* Menghapus margin yang mungkin ada */
+    height: 30px;
+}
+
+/* Gaya untuk main-menu */
+.main-menu {
+    display: flex;
+    flex-direction: column; /* Menentukan tata letak vertikal */
+    align-items: flex-end; /* Untuk membuat elemen sejajar tengah */
+    margin: 0; /* Menghapus margin yang mungkin ada */
+    height: 70px;
+}
+
+/* Gaya untuk elemen dengan kelas logo_smp */
+.logo_smp {
+    display: flex;
+    margin: 0;
+    box-sizing: border-box;
+    float: none;
+    line-height: 24px;
+    position: relative;
+    z-index: auto;
+}
+
+/* Gaya untuk elemen dengan kelas nama_sekolah */
+.nama_sekolah {
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 48px; /* Redundan - font-size sudah didefinisikan di atas */
+}
+
+/* Gaya untuk elemen dengan kelas slogan_sekolah */
+.slogan_sekolah {
+    padding-left: 5px;
+    display: flex;
+    box-sizing: border-box;
+    float: none;
+    line-height: 24px;
+    position: relative;
+    z-index: auto;
+}
+
+/* Gaya untuk elemen dengan kelas head-button */
+.head-button {
+    width: 119px;
+    height: 119px;
+    background-image: url(circle.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -999999px;
+    position: absolute;
+    right: 210px;
+    top: 10px;
+    padding: 0;
+}
+
+/* Gaya untuk elemen dengan kelas Dokumentasi */
+.Dokumentasi {
+    display: flex; /* Mengatur tampilan elemen sebagai fleksibel (flexbox) */
+    height: 480px; /* Mengatur tinggi elemen menjadi 560 piksel */
+    width: 560px; /* Mengatur lebar elemen menjadi 640 piksel */
+    background-image: url(content.jpg); /* Menetapkan gambar latar belakang dari file content.jpg */
+    background-size: cover; /* Mengatur ukuran gambar latar belakang untuk menutupi seluruh elemen */
+    border-bottom: 5px solid lightskyblue; /* Menambahkan garis bawah dengan ketebalan 5 piksel dan warna lightskyblue */
+    border-top: 5px solid salmon; /* Menambahkan garis atas dengan ketebalan 5 piksel dan warna salmon */
+    align-items: center;
+    text-align: center;
+}
+
+/* Gaya untuk elemen dengan kelas isi_konten */
+.isi_konten {
+    margin-top: 25px;
+    border-top: solid 5px black; /* Menambahkan garis atas */
+    padding-top: 25px; /* Menambahkan padding atas */
+    height: auto; /* Mengatur tinggi menjadi otomatis */
+}
+
+/* Gaya untuk elemen dengan kelas main_Content */
+.main_Content {
+    padding: 25px; /* Menambahkan padding */
+    width: 600px; /* Mengatur lebar elemen menjadi 600 piksel */
+    box-sizing: border-box; /* Mengatur box-sizing ke border-box untuk memasukkan padding dalam perhitungan lebar */
+    float: left; /* Mengatur elemen mengambang ke kiri */
+}
+
+/* Gaya untuk elemen dengan kelas side_Content */
+.side_Content {
+    padding-top: 20px; /* Menambahkan padding atas */
+    padding: 20px; /* Menambahkan padding */
+    width: 300px; /* Mengatur lebar elemen menjadi 300 piksel */
+    float: right; /* Mengatur elemen mengambang ke kanan */
+}
+
+/* Gaya untuk elemen dengan kelas content2 */
+.content2 {
+    margin-top: 25px;
+    border-top: solid 5px black; /* Menambahkan garis atas */
+    padding-top: 25px; /* Menambahkan padding atas */
+}
+
+/* Gaya untuk elemen dengan kelas testi */
+.testi {
+    padding-left: 20px; /* Menambahkan padding kiri */
+    padding-bottom: 20px; /* Menambahkan padding bawah */
+}
+
+/* Gaya untuk elemen dengan kelas footer */
+.footer {
+    background-color: #000000; /* Mengatur warna latar belakang menjadi hitam (#000000) */
+    padding: 10px; /* Menambahkan padding */
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+    grid-area: footer; /* Mengatur area grid CSS untuk elemen footer */
+    color: white; /* Mengatur warna teks menjadi putih */
+}
+
+/* Gaya untuk elemen dengan kelas copy di dalam footer */
+.footer .copy {
+    color: #eaeaea; /* Mengatur warna teks menjadi abu-abu (#eaeaea) */
+    font-size: 12px; /* Mengatur ukuran teks menjadi 12 piksel */
+}

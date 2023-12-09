@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- mengatur karakter set dan viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Judul halaman -->
+  <title>Login & Register</title>
+  <!-- Menghubungkan dengan file CSS -->
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<!-- Container untuk mengatur tampilan login dan register -->
+<div class="container">
+  <!-- Judul halaman -->
+  <div class="title">
+    Login & Register
+  </div>
+
+  <!-- Formulir input untuk username -->
+  <div class="form-grup">
+    <label for="username">Username</label>
+    <input type="text" class="form-kontrol" id="username" placeholder="Username">
+  </div>
+
+  <!-- Formulir input untuk password -->
+  <div class="form-grup">
+    <label for="password">Password</label>
+    <input type="password" class="form-kontrol" id="password" placeholder="Password">
+  </div>
+
+  <!-- Tombol untuk login dan register -->
+  <div class="form-grup">
+    <button type="button" class="btn" id="loginBtn">Login</button>
+    <button type="button" class="btn" id="registerBtn">Register</button>
+  </div>
+</div>
+
+<script>
+  // Fungsi untuk melakukan login
+  const login = () => {
+    // Mengambil nilai dari input username dan password
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Request koneksi ke PHP dengan menggunakan AJAX
+    fetch("index.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `action=login&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`,
+    })
+    .then(response => response.text())
+    .then(result => {
+      // Menampilkan hasil dari PHP ke console log untuk pengecekan
+      console.log(result);
+      // Menampilkan hasil dari PHP ke dalam sebuah alert
+      alert(result);
+      // Jika login berhasil, maka pindah ke halaman.html
+      if (result.trim() === "Login berhasil !") {
+        console.log("Redirecting to halaman.html");
+        window.location.href = "halaman.html";
+      }
+    })
+    .catch(error => {
+      console.error("Error tidak dapat membuka index.php:", error);
+    });
+  };
+
+  // Fungsi untuk melakukan registrasi
+  const register = () => {
+    // Mengambil hasil inputan dari user berupa input username dan password
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Request koneksi ke PHP dengan menggunakan AJAX
+    fetch("index.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `action=register&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`,
+    })
+    .then(response => response.text())
+    .then(result => {
+      // Menampilkan hasil dari PHP ke dalam sebuah alert
+      alert(result);
+    })
+    .catch(error => {
+      console.error("Registrasi Error saat pengalihan php:", error);
+    });
+  };
+
+  // Menambahkan event listener pada tombol login dan register
+  document.getElementById("loginBtn").addEventListener("click", login);
+  document.getElementById("registerBtn").addEventListener("click", register);
+</script>
+
+</body>
+</html>
