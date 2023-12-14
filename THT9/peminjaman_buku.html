@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman Buku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Peminjaman Buku</h2>
+
+    <!-- Formulir untuk melakukan peminjaman buku -->
+    <form action="peminjaman_buku.php" method="post">
+        <label for="judul">Judul Buku:</label>
+        <input type="text" id="judul" name="judul" required>
+
+        <label for="peminjam">Nama Peminjam:</label>
+        <input type="text" id="peminjam" name="peminjam" required>
+
+        <button type="submit" name="submit">Pinjam Buku</button>
+    </form>
+
+    <!-- Penampilan pesan hasil peminjaman -->
+    <div id="pesanPeminjaman"></div>
+
+    <!-- Kembali ke halaman utama -->
+    <a href="index.php">Kembali ke Halaman Utama</a>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Buku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Daftar Buku</h1>
+
+    <?php
+    // Panggil metode untuk menampilkan daftar buku dari kelas DaftarBuku
+    include_once "DaftarBuku.php";
+    $daftarBuku = new DaftarBuku();
+    echo $daftarBuku->tampilkanDaftarBuku();
+    ?>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+[{"judul":"akmal","pengarang":"akmal","tahun_terbit":"2023"},{"judul":"cara menjadi ganteng","pengarang":"akmal","tahun_terbit":"0211"},{"judul":"pk","pengarang":"ok","tahun_terbit":"11111132"}]

@@ -1,0 +1,16 @@
+
+dvwa,p@ssw0rd
+dvwa,p@ssw0rd
+dvwa1,$2y$10$bErs7Ou3I7O.1erPer9OLuezUh2ts5ieuHQ0N1TyhD.qgriqzgcoG
+dvwa,p@ssw0rd
+dvwa,p@ssw0rd
+dvwa1,$2y$10$bErs7Ou3I7O.1erPer9OLuezUh2ts5ieuHQ0N1TyhD.qgriqzgcoG
+5,dvwa2,$2y$10$eP8FCokekkIM2ByYf8MBwO/rBDHkC1IFc4VOb6jEQFd6J0FXwPndW
+dvwa,p@ssw0rd
+dvwa,p@ssw0rd
+dvwa1,$2y$10$bErs7Ou3I7O.1erPer9OLuezUh2ts5ieuHQ0N1TyhD.qgriqzgcoG
+dvwa,p@ssw0rd
+dvwa,p@ssw0rd
+dvwa1,$2y$10$bErs7Ou3I7O.1erPer9OLuezUh2ts5ieuHQ0N1TyhD.qgriqzgcoG
+5,dvwa2,$2y$10$eP8FCokekkIM2ByYf8MBwO/rBDHkC1IFc4VOb6jEQFd6J0FXwPndW
+9,dvwa,$2y$10$nRd2RDaGsLVbUKGA5FVfEOsBUSd38QmOH9kzs1a2HPR9blq695Pv6
